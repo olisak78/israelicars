@@ -1,5 +1,5 @@
 import './Header.css';
-import { ReactComponent as Logo } from '../icons/svg/wacara.svg';
+import { ReactComponent as Home } from '../icons/whouse.svg';
 
 interface HeaderProps {
   handleLogoClick: () => void;
@@ -8,7 +8,7 @@ interface HeaderProps {
 const Header = ({ handleLogoClick }: HeaderProps) => {
   return (
     <div className='header-container'>
-      <Logo className='header-logo' onClick={handleLogoClick} />
+      <Home className='header-logo' onClick={handleLogoClick} />
     </div>
   );
 };

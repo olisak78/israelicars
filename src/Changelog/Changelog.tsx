@@ -1,11 +1,13 @@
 import './Changelog.css';
+import { ReactComponent as Logo } from '../icons/svg/bacara.svg';
 
 const Changelog = () => {
   return (
     <>
-      {/* <div className='changelog-title'>What's New</div> */}
       <div className='changelog-version'>
-        6/7/2025 - v 1.0 <span className='version-name'>beta</span>
+        <Logo className='logo' />
+        6/7/2025 - v 1.0
+        <span className='version-name'>beta</span>
       </div>
 
       <div className='changelog-greeting'>

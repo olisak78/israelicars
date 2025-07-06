@@ -13,6 +13,8 @@
 .changelog-version {
   font-size: 2vw;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
 }
 
 .version-name {
@@ -38,4 +40,11 @@
 .changelog-list {
   margin-top: -1vh;
   font-size: 1.3vw;
+}
+
+.logo {
+  width: 22vw;
+  height: 22vh;
+  margin-right: 70vw;
+  position: absolute;
 }

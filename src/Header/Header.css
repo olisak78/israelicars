@@ -9,7 +9,8 @@
 }
 
 .header-logo {
-  width: 11vw;
-  height: 10.5vh;
+  width: 9vw;
+  height: 8vh;
   cursor: pointer;
+  margin-top: 0.7vh;
 }
