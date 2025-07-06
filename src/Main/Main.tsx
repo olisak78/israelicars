@@ -62,6 +62,8 @@ const Main = () => {
     setDisplay('changelog');
   };
 
+  console.log(searchError);
+
   return (
     <>
       <Header handleLogoClick={handleBackToSearch} />
