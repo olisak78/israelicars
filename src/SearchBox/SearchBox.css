@@ -1,0 +1,92 @@
+.input-main-title {
+  font-weight: 600;
+  font-size: 2vw;
+  margin: 4vh 0 1vh 0;
+}
+
+.input-box {
+  margin: 1vh 1vw 1vh 1vw;
+  padding: 2vh 5vw 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-box-title {
+  font-weight: 300;
+  font-size: 1.3vw;
+  align-self: flex-start;
+  margin: 0 0 1vh 0;
+}
+
+.input-box-error {
+  color: red;
+  font-weight: 500;
+  font-size: 1.3vw;
+  align-self: flex-start;
+  margin: 0 0 1vh 0;
+}
+.input-box-search {
+  width: 28vw;
+  height: 10vh;
+  padding: 2vh 3vw;
+  border: 2px solid #e2e8f0;
+  margin: 0 0 3vh 0;
+  border-radius: 12px;
+  font-size: 3vw;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.1vw;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  letter-spacing: 0.5vw;
+}
+
+.input-box-search:focus {
+  background-color: rgb(250, 245, 110);
+}
+
+.input-box-search::placeholder {
+  color: rgb(158, 158, 158);
+  font-size: 2.3vw;
+  font-weight: 400;
+  letter-spacing: 0.05vw;
+}
+.search-button {
+  width: 100%;
+  padding: 2.5vh 3vw;
+  background: rgb(111, 111, 111);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.7vw;
+  font-weight: 600;
+  letter-spacing: 0.2vw;
+  margin: 4vh 5vh;
+}
+
+.search-button.valid {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: black;
+}
+
+.search-button.valid:hover {
+  box-shadow: 0 10px 30px #4252fb;
+  background-color: #2000ad;
+}
+
+.search-spinner {
+  margin-top: 5.5vh;
+  width: 10vw;
+  height: 8vh;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

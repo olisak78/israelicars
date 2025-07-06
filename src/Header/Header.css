@@ -1,0 +1,15 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 10vh;
+  width: auto;
+  background-color: black;
+  display: grid;
+}
+
+.header-logo {
+  width: 11vw;
+  height: 10.5vh;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.footer-container {
+  height: 5vh;
+  width: auto;
+  background-color: black;
+  color: lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+[class^='footer-item'] {
+  padding: 0 1vw 0 1vw;
+}
+
+.footer-item-copyright {
+  margin-left: 40vw;
+}
+
+.footer-item-version {
+  margin-left: auto;
+}
+
+.footer-item-news {
+  cursor: pointer;
+}
+
+.footer-item-news:hover {
+  text-decoration: underline;
+}
