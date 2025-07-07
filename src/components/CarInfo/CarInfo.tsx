@@ -3,7 +3,6 @@ import { CarRecord } from '../../utils/types';
 import { useTranslation } from 'react-i18next';
 import './CarInfo.css';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { ReactElement } from 'react';
 
 interface CarInfoProps {
   carRecord: CarRecord;
@@ -13,7 +12,6 @@ interface CarInfoProps {
 const CarInfo = ({ carRecord, handleBack }: CarInfoProps) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-
   return (
     <>
       <div className='result-title'>
