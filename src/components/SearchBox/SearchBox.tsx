@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './SearchBox.css';
-import { ReactComponent as Spinner } from '../icons/spinner-solid.svg';
-import { addDashes } from '../utils/addDashes';
+import { ReactComponent as Spinner } from '../../icons/spinner-solid.svg';
+import { addDashes } from '../../utils/addDashes';
+import { useTranslation } from 'react-i18next';
 import {
   CAR_API_URL,
   CarApiResponse,
   CarRecord,
   STORAGE_KEY,
-} from '../utils/types';
+} from '../../utils/types';
 
 interface SearchBoxProps {
   onCarFound: (carRecord: CarRecord) => void;
@@ -19,6 +20,7 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
   const [validPlate, setValidPlate] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   // Get cached car record from local storage
   const getCachedRecord = (carNumber: string): CarRecord | null => {
@@ -30,7 +32,7 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
         return parsedCache[carNumber] || null;
       }
     } catch (error) {
-      setError(`Error reading from cache: ${error}`);
+      setError(`${t('search.errors.cacheRead')}: ${error}`);
     }
     return null;
   };
@@ -44,7 +46,7 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
       parsedCache[carNumber] = record;
       localStorage.setItem(STORAGE_KEY, JSON.stringify(parsedCache));
     } catch (error) {
-      setError(`Error saving to cache: ${error}`);
+      setError(`${t('search.errors.cacheSave')}: ${error}`);
     }
   };
 
@@ -56,22 +58,22 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
     try {
       const response = await fetch(url);
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`${t('search.errors.httpError')}: ${response.status}`);
       }
 
       const data: CarApiResponse = await response.json();
 
       if (!data.success) {
-        throw new Error('API request was not successful');
+        throw new Error(t('search.errors.apiNotSuccessful'));
       }
 
       if (!data.result.records || data.result.records.length === 0) {
-        throw new Error('No vehicle found with this license number');
+        throw new Error(t('search.errors.noVehicleFound'));
       }
 
       return data?.result?.records[0];
     } catch (error) {
-      setError(`API fetch error: ${error}`);
+      setError(`${t('search.errors.apiFetchError')}: ${error}`);
       throw error;
     } finally {
       setLoading(false);
@@ -84,14 +86,14 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
     const plateNum: boolean = !isNaN(Number(rawValue[rawValue.length - 1]));
     if (plateNum || rawValue === '') {
       if (shownPlate === '' && rawValue === '0')
-        setError("License can't begin with zero!");
+        setError(t('search.errors.cantStartWithZero'));
       else {
         setError('');
         setShownPlate(rawValue);
         if (validPlate && rawValue.length < 7) setValidPlate(false);
         if (!validPlate && rawValue.length > 6) setValidPlate(true);
       }
-    } else setError('Please enter numbers only!');
+    } else setError(t('search.errors.numbersOnly'));
   };
 
   const handleSearch = async () => {
@@ -121,9 +123,7 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
       }
     } catch (error) {
       const errorMessage =
-        error instanceof Error
-          ? error.message
-          : 'An error occurred while searching';
+        error instanceof Error ? error.message : t('common.error');
       setError(errorMessage);
       onError(errorMessage);
     } finally {
@@ -133,21 +133,23 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
 
   return (
     <>
-      <div className='input-main-title'>Enter License Number</div>
+      <div className='input-main-title'>{t('search.enterLicense')}</div>
       <div className='input-box'>
-        {!error && <div className='input-box-title'>License Plate Number</div>}
+        {!error && (
+          <div className='input-box-title'>{t('search.licensePlate')}</div>
+        )}
         {error && <div className='input-box-error'>{error}</div>}
         <input
           type='text'
           className='input-box-search'
-          placeholder='Enter numbers only'
+          placeholder={t('search.placeholder')}
           maxLength={10}
           value={addDashes(shownPlate)}
           onChange={handleInput}
           onKeyDown={(e) => {
             if (e.key === ' ') e.preventDefault();
           }}
-        ></input>
+        />
         {loading && <Spinner className='search-spinner' fill='black' />}
         {!loading && (
           <button
@@ -155,7 +157,7 @@ const SearchBox = ({ onCarFound, onError }: SearchBoxProps) => {
             onClick={handleSearch}
             className={`search-button ${validPlate && 'valid'}`}
           >
-            Search Vehicle
+            {t('search.searchVehicle')}
           </button>
         )}
       </div>

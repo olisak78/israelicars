@@ -1,0 +1,50 @@
+{
+  "search": {
+    "title": "Поиск автомобиля по номеру",
+    "subtitle": "Поиск информации",
+    "enterLicense": "Введите номер автомобиля",
+    "licensePlate": "Номерной знак",
+    "placeholder": "Только цифры",
+    "searchVehicle": "Поиск автомобиля",
+    "errors": {
+      "cantStartWithZero": "Номер не может начинаться с нуля!",
+      "numbersOnly": "Просьба вводить только цифры!",
+      "cacheRead": "Ошибка чтения из кэша",
+      "cacheSave": "Ошибка сохранения в кэш",
+      "httpError": "HTTP ошибка! статус",
+      "apiNotSuccessful": "Запрос API не был успешным",
+      "noVehicleFound": "Автомобиль с этим номером не найден",
+      "apiFetchError": "Ошибка получения данных API"
+    }
+  },
+  "carInfo": {
+    "subtitle": "Информация об автомобиле",
+    "licensePlate": "Номерной знак",
+    "brand": "Производитель",
+    "gradeLevel": "Комплектация",
+    "productionYear": "Год выпуска",
+    "ownership": "Собственность",
+    "validUntil": "Действие техпаспорта",
+    "lastTest": "Последний техосмотр",
+    "color": "Цвет",
+    "onRoadFrom": "На дороге с",
+    "engineType": "Тип двигателя",
+    "frontTire": "Передняя шина",
+    "rearTire": "Задняя шина",
+    "chassis": "Шасси",
+    "searchAnother": "Поиск другого автомобиля",
+    "ownership_types": {
+      "private": "Частный",
+      "commercial": "Коммерческий"
+    }
+  },
+  "changelog": {
+    "title": "Что нового",
+    "subtitle": "Список версий"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "na": "Н/Д"
+  }
+}

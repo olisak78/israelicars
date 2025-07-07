@@ -39,6 +39,7 @@
   transition: all 0.3s ease;
   background: #f8fafc;
   letter-spacing: 0.5vw;
+  direction: ltr !important;
 }
 
 .input-box-search:focus {

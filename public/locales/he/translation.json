@@ -1,0 +1,50 @@
+{
+  "search": {
+    "title": "חיפוש רכב לפי מספר רישוי",
+    "subtitle": "חיפוש מידע על רכב",
+    "enterLicense": "הכנס מספר רישוי",
+    "licensePlate": "מספר לוחית רישוי",
+    "placeholder": "הכנס מספרים בלבד",
+    "searchVehicle": "חפש רכב",
+    "errors": {
+      "cantStartWithZero": "רישוי לא יכול להתחיל באפס",
+      "numbersOnly": "אנא הכנס מספרים בלבד",
+      "cacheRead": "שגיאה בקריאה מהמטמון",
+      "cacheSave": "שגיאה בשמירה למטמון",
+      "httpError": "שגיאת HTTP סטטוס",
+      "apiNotSuccessful": "בקשת API לא הצליחה",
+      "noVehicleFound": "לא נמצא רכב עם מספר רישוי זה",
+      "apiFetchError": "שגיאה בהבאת נתונים מה-API"
+    }
+  },
+  "carInfo": {
+    "subtitle": "מידע על רכב",
+    "licensePlate": "לוחית רישוי",
+    "brand": "יצרן",
+    "gradeLevel": "גימור",
+    "productionYear": "שנת ייצור",
+    "ownership": "בעלות",
+    "validUntil": "תוקף רשיון רכב",
+    "lastTest": "טסט אחרון",
+    "color": "צבע",
+    "onRoadFrom": "מועד עליה לכביש",
+    "engineType": "סוג מנוע",
+    "frontTire": "צמיג קדמי",
+    "rearTire": "צמיג אחורי",
+    "chassis": "שלדה",
+    "searchAnother": "חפש רכב אחר",
+    "ownership_types": {
+      "private": "פרטי",
+      "commercial": "מסחרי"
+    }
+  },
+  "changelog": {
+    "title": "מה חדש בגרסה",
+    "subtitle": "רשימת גרסאות"
+  },
+  "common": {
+    "loading": "טוען...",
+    "error": "שגיאה",
+    "na": "לא זמין"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "search": {
+    "title": "Find Car By License Number",
+    "subtitle": "Vehicle Information Lookup",
+    "enterLicense": "Enter License Number",
+    "licensePlate": "License Plate Number",
+    "placeholder": "Enter numbers only",
+    "searchVehicle": "Search Vehicle",
+    "errors": {
+      "cantStartWithZero": "License can't begin with zero!",
+      "numbersOnly": "Please enter numbers only!",
+      "cacheRead": "Error reading from cache",
+      "cacheSave": "Error saving to cache",
+      "httpError": "HTTP error! status",
+      "apiNotSuccessful": "API request was not successful",
+      "noVehicleFound": "No vehicle found with this license number",
+      "apiFetchError": "API fetch error"
+    }
+  },
+  "carInfo": {
+    "licensePlate": "License Plate",
+    "brand": "Brand",
+    "gradeLevel": "Grade Level",
+    "productionYear": "Production Year",
+    "ownership": "Ownership",
+    "validUntil": "Valid Until",
+    "lastTest": "Last Test",
+    "color": "Color",
+    "onRoadFrom": "On Road From",
+    "engineType": "Engine Type",
+    "frontTire": "Front Tire",
+    "rearTire": "Rear Tire",
+    "chassis": "Chassis",
+    "searchAnother": "Search Another Vehicle",
+    "ownership_types": {
+      "private": "Private",
+      "commercial": "Commercial"
+    }
+  },
+  "changelog": {
+    "title": "What's New",
+    "subtitle": "Versions list"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "na": "N/A"
+  }
+}

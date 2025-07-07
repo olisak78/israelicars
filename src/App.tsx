@@ -1,11 +1,16 @@
 import './App.css';
-import Main from './Main/Main';
+import Main from './components/Main/Main';
+import { Analytics } from '@vercel/analytics/react';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
   return (
-    <div className='app-container'>
-      <Main />
-    </div>
+    <LanguageProvider>
+      <div className='app-container'>
+        <Main />
+        <Analytics />
+      </div>
+    </LanguageProvider>
   );
 }
 

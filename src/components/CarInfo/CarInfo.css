@@ -54,6 +54,15 @@
   margin-left: -1.5vw;
 }
 
+[class^='grid-item-title-he'] {
+  font-weight: 700;
+  justify-self: flex-end;
+}
+
+[class^='grid-item-value-he'] {
+  margin-left: 0;
+}
+
 .car-number {
   background-color: rgb(250, 245, 110);
   border: 2px solid #e2e8f0;

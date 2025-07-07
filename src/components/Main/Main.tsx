@@ -4,42 +4,40 @@ import SearchBox from '../SearchBox/SearchBox';
 import './Main.css';
 import Title from '../Title/Title';
 import Changelog from '../Changelog/Changelog';
-import { CarRecord } from '../utils/types';
+import { CarRecord } from '../../utils/types';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import { useTranslation } from 'react-i18next';
 
 const Main = () => {
   const [display, setDisplay] = useState('search');
   const [carRecord, setCarRecord] = useState<CarRecord | null>(null);
-  const [searchError, setSearchError] = useState<string | null>(null);
+  const { t } = useTranslation();
 
   const handleCarFound = (record: CarRecord) => {
     setCarRecord(record);
-    setSearchError(null);
     setDisplay('result');
   };
 
   const handleSearchError = (error: string) => {
-    setSearchError(error);
     setCarRecord(null);
     // Stay on search display to show the error
   };
 
   const handleBackToSearch = () => {
     setDisplay('search');
-    setSearchError(null);
   };
 
   const getTitle = () => {
     switch (display) {
       case 'search':
-        return 'Find Car By License Number';
+        return t('search.title');
       case 'result':
         return carRecord
           ? `${carRecord.shnat_yitzur} ${carRecord.kinuy_mishari}`
-          : 'Vehicle Information';
+          : t('carInfo.title');
       case 'changelog':
-        return "What's New";
+        return t('changelog.title');
       default:
         return '';
     }
@@ -48,11 +46,11 @@ const Main = () => {
   const getSubtitle = () => {
     switch (display) {
       case 'search':
-        return 'Vehicle Information Lookup';
+        return t('search.subtitle');
       case 'result':
-        return 'Vehicle Information';
+        return t('carInfo.subtitle');
       case 'changelog':
-        return 'Versions list';
+        return t('changelog.subtitle');
       default:
         return '';
     }
@@ -61,8 +59,6 @@ const Main = () => {
   const handleChangelog = () => {
     setDisplay('changelog');
   };
-
-  console.log(searchError);
 
   return (
     <>
