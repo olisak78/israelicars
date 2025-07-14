@@ -1,7 +1,30 @@
+/* Base styles for changelog elements */
 [class^='changelog-'] {
   padding: 0.5vh 0 0.5vh 0;
   font-size: 1.2vw;
   font-weight: 400;
+  direction: ltr !important;
+}
+
+/* Container for standalone changelog (if needed in future) */
+.changelog-container {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 90vw;
+  max-height: 80vh;
+}
+
+/* Container for changelog inside modal */
+.changelog-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .changelog-title {
@@ -11,10 +34,14 @@
 }
 
 .changelog-version {
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 500;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 2vh 0 1vh 0;
+  position: relative;
+  width: 100%;
 }
 
 .version-name {
@@ -24,27 +51,82 @@
 .changelog-greeting {
   font-size: 1.3vw;
   font-weight: 400;
+  margin-bottom: 1vh;
 }
 
 .changelog-subtitle {
   font-size: 1.3vw;
   font-weight: 500;
-  margin-left: -4vh;
+  margin: 1vh 0 0.5vh 0;
+  color: #374151;
 }
+
 .changelog-body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.changelog-log {
+  width: 100%;
 }
 
 .changelog-list {
-  margin-top: -1vh;
-  font-size: 1.3vw;
+  margin: 0.5vh 0 1vh 2vh;
+  font-size: 1.2vw;
+  color: #6b7280;
 }
 
+.changelog-list li {
+  margin-bottom: 0.5vh;
+}
+
+/* Logo styles for standalone view */
 .logo {
   width: 22vw;
   height: 22vh;
   margin-right: 70vw;
   position: absolute;
+}
+
+/* Logo styles for modal view */
+.logo-modal {
+  width: 8vw;
+  height: 8vh;
+  position: absolute;
+  left: 1vw;
+  top: -1vh;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  [class^='changelog-'] {
+    font-size: 3.5vw;
+  }
+
+  .changelog-version {
+    font-size: 4vw;
+  }
+
+  .changelog-greeting {
+    font-size: 3.8vw;
+  }
+
+  .changelog-subtitle {
+    font-size: 3.8vw;
+  }
+
+  .changelog-list {
+    font-size: 3.5vw;
+    margin-left: 5vw;
+  }
+
+  .logo-modal {
+    width: 15vw;
+    height: 12vh;
+    left: 2vw;
+    top: -2vh;
+  }
 }

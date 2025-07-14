@@ -1,0 +1,111 @@
+/* DataDisplay Component Styles */
+
+.no-data-message {
+  padding: 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th {
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+}
+
+.data-table td {
+  border: 1px solid #d1d5db;
+  padding: 0.75rem;
+  color: #374151;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.data-table tr:hover {
+  background-color: #f3f4f6;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+}
+
+.data-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.data-value {
+  color: #6b7280;
+  font-size: 0.875rem;
+  word-break: break-word;
+}
+
+.section-title {
+  color: #374151;
+  margin-bottom: 1vh;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.detailed-section {
+  margin-top: 2vh;
+}
+
+.basic-section {
+  margin-bottom: 2vh;
+}
+
+.info-message {
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.info-message strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.warning-message {
+  padding: 1rem;
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  color: #92400e;
+  margin-top: 1rem;
+}
+
+.type-section {
+  margin-bottom: 3vh;
+}
+
+.type-section:last-child {
+  margin-bottom: 0;
+}

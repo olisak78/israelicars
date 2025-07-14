@@ -1,15 +1,22 @@
 import './Footer.css';
 
 interface FooterProps {
-  handleClick: () => void;
+  handleChangelogClick: () => void;
+  handleDisclaimerClick: () => void;
 }
 
-const Footer = ({ handleClick }: FooterProps) => {
+const Footer = ({
+  handleChangelogClick,
+  handleDisclaimerClick,
+}: FooterProps) => {
   return (
     <div className='footer-container'>
       <div className='footer-item-copyright'>© 2025 Blue Acara Project</div>
-      <div className='footer-item-version'>v 1.1 alpha</div>
-      <div className='footer-item-news' onClick={handleClick}>
+      <div className='footer-item-version'>v 1.2 Rasbora</div>
+      <div className='footer-item-news' onClick={handleDisclaimerClick}>
+        Disclaimer
+      </div>
+      <div className='footer-item-news' onClick={handleChangelogClick}>
         Changelog
       </div>
     </div>

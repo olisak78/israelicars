@@ -1,0 +1,104 @@
+.search-buttons-container {
+  display: flex;
+  width: max-content;
+  height: 5vh;
+  direction: ltr !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3vw;
+  margin: 6vh 0 1vh 0;
+  padding: 1vh 0 1vh 0;
+  flex-wrap: wrap;
+}
+
+.search-button-item {
+  min-width: max(10vw, 12ch);
+  width: auto;
+  height: max(6vh, 5ch);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  font-size: 1.1vw;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  cursor: pointer;
+  border-radius: min(1.2vh, 1.2vw);
+  padding: 1vh 1.5vw;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-button-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.search-button-item:hover::before {
+  left: 100%;
+}
+
+.search-button-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.search-button-item:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.search-button-item:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  background: #9ca3af;
+}
+
+.search-button-item:disabled:hover {
+  transform: none;
+  box-shadow: 0 8px 25px rgba(156, 163, 175, 0.3);
+  background: #9ca3af;
+}
+
+.search-button-item:disabled::before {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-buttons-container {
+    gap: 1vw;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .search-button-item {
+    font-size: 3vw;
+    min-width: 80vw;
+    height: 8vh;
+    margin-bottom: 1vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-button-item {
+    font-size: 4vw;
+    min-width: 90vw;
+  }
+}

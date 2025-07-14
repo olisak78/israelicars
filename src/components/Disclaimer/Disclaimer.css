@@ -1,0 +1,27 @@
+/* Base styles for changelog elements */
+[class^='disclaimer-'] {
+  padding: 0.5vh 0 0.5vh 0;
+  font-size: 1.2vw;
+  font-weight: 400;
+  direction: ltr !important;
+}
+
+/* Container for changelog inside modal */
+.disclaimer-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.disclaimer-important {
+  font-weight: 600;
+}
+
+.disclaimer-list.rtl {
+  direction: rtl !important;
+}
+
+.disclaimer-text.rtl {
+  direction: rtl !important;
+}

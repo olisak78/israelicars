@@ -1,49 +1,129 @@
 {
-  "search": {
-    "title": "Find Car By License Number",
-    "subtitle": "Vehicle Information Lookup",
-    "enterLicense": "Enter License Number",
-    "licensePlate": "License Plate Number",
-    "placeholder": "Enter numbers only",
-    "searchVehicle": "Search Vehicle",
-    "errors": {
-      "cantStartWithZero": "License can't begin with zero!",
-      "numbersOnly": "Please enter numbers only!",
-      "cacheRead": "Error reading from cache",
-      "cacheSave": "Error saving to cache",
-      "httpError": "HTTP error! status",
-      "apiNotSuccessful": "API request was not successful",
-      "noVehicleFound": "No vehicle found with this license number",
-      "apiFetchError": "API fetch error"
+  "buttons": {
+    "generalInfo": "Vehicle Data",
+    "ownershipHistory": "Owners List",
+    "handicappedSign": "Handicapped",
+    "kilometrage": "Mileage"
+  },
+  "tooltips": {
+    "basicInfo": "Get basic vehicle information",
+    "ownershipHistory": "View ownership history (cars only)",
+    "handicappedSign": "Check handicapped parking permit (cars only)",
+    "kilometrage": "View vehicle kilometrage data (cars only)",
+    "categories": {
+      "car": "Search for cars",
+      "bike": "Search for motorcycles",
+      "truck": "Search for trucks",
+      "bus": "Search for buses"
     }
   },
-  "carInfo": {
-    "licensePlate": "License Plate",
-    "brand": "Brand",
-    "gradeLevel": "Grade Level",
-    "productionYear": "Production Year",
+  "modal": {
+    "titles": {
+      "basicInfo": "",
+      "ownershipHistory": "Ownership History",
+      "handicappedSign": "Handicapped Parking Permit",
+      "kilometrage": "Vehicle Kilometrage",
+      "default": "Vehicle Information",
+      "multipleData": "Vehicle Information"
+    },
+    "basicInformation": "General Information",
+    "detailedInformation": "Detailed Information",
+    "additionalDataNotAvailable": "Additional detailed information is not available for this vehicle."
+  },
+  "fields": {
+    "vehicleNumber": "Vehicle Number",
+    "manufacturer": "Manufacturer",
+    "model": "Model",
+    "manufacturingYear": "Manufacturing Year",
+    "fuelType": "Fuel Type",
+    "totalWeight": "Total Weight",
     "ownership": "Ownership",
     "validUntil": "Valid Until",
     "lastTest": "Last Test",
     "color": "Color",
     "onRoadFrom": "On Road From",
-    "engineType": "Engine Type",
-    "frontTire": "Front Tire",
-    "rearTire": "Rear Tire",
+    "frontTire": "Tires",
     "chassis": "Chassis",
-    "searchAnother": "Search Another Vehicle",
-    "ownership_types": {
-      "private": "Private",
-      "commercial": "Commercial"
+    "trimLevel": "Trim Level",
+    "lastTestKilometers": "Last Test Kilometers",
+    "firstRegistration": "First Registration",
+    "ownershipDate": "Ownership Date",
+    "tagIssueDate": "Permit Issue Date",
+    "tagType": "Permit Type",
+    "engineNumber": "Engine Number",
+    "engineCapacity": "Engine Capacity",
+    "horsePower": "Horse Power",
+    "seatsNumber": "Number of Seats",
+    "axleWeight": "Axle Weight",
+    "propulsion": "Propulsion",
+    "towing": "Towing",
+    "vehicleTypeGroup": "Vehicle Type Group",
+    "vehicleType": "Vehicle Type",
+    "manufacturerCountry": "Manufacturer Country",
+    "safetyEquipmentLevel": "Safety Equipment Level",
+    "pollutionGroup": "Pollution Group",
+    "engineModel": "Engine Model",
+    "commercialName": "Commercial Name",
+    "taxGroup": "Tax Group",
+    "engineVolume": "Engine Volume",
+    "height": "Height",
+    "sunRoof": "Sun Roof",
+    "carBodyStyle": "Body Style",
+    "doorsNumber": "Number of Doors",
+    "towingCapacityWithBrakes": "Towing Capacity with brakes",
+    "towingCapacityWithoutBrakes": "Towing Capacity without brakes",
+    "standard": "Standard",
+    "safetyScore": "Safety Score",
+    "operator": "Transport Company",
+    "cluster": "Area of operation",
+    "busLicense": "Bus License",
+    "stoneProof": "Stone proof windows",
+    "bulletProof": "Bullet proof",
+    "busSize": "Bus size",
+    "busType": "Bus type"
+  },
+  "errors": {
+    "unknownAction": "Unknown action requested",
+    "unknownCategory": "Unknown vehicle category",
+    "enterValidNumber": "Please enter a valid vehicle number",
+    "noDataFound": "No data found for this vehicle",
+    "apiError": "Error fetching data from server",
+    "cacheError": "Error accessing cached data"
+  },
+  "search": {
+    "placeholder": "License plate number",
+    "errors": {
+      "enterValidNumber": "Please enter a valid vehicle number",
+      "noDataFound": "No data found for this vehicle",
+      "noVehicleFound": "No Vehicle Found",
+      "selectActionType": "Select which information you would like",
+      "cantStartWithZero": "Vehicle number can't start with zero",
+      "numbersOnly": "Please enter numbers only"
     }
   },
-  "changelog": {
-    "title": "What's New",
-    "subtitle": "Versions list"
-  },
   "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "na": "N/A"
+    "close": "Close",
+    "na": "N/A",
+    "yes": "Yes",
+    "no": "No",
+    "noDataFound": "No data found",
+    "error": "An error occurred"
+  },
+  "disclaimer": {
+    "title": "'Israeli Cars' website Disclaimer",
+    "text": "All vehicle information displayed on this website is sourced from the public database of the Israeli Ministry of Transport. This website serves as an independent interface to access publicly available data and is not affiliated with, endorsed by, or operated by the Israeli Ministry of Transport.",
+    "importantNotice": "Important Notice:",
+    "finalNote": "For official and legally binding vehicle information, please contact the Israeli Ministry of Transport directly.",
+    "note1": "All data is provided 'as is' from the official government database",
+    "note2": "We do not guarantee the accuracy, completeness, or timeliness of any information displayed",
+    "note3": "The Ministry of Transport is the sole authority responsible for the accuracy and validity of all vehicle data",
+    "note4": "We are not responsible for any errors, omissions, or discrepancies in the data",
+    "note5": "Users should verify critical information directly with the Israeli Ministry of Transport",
+    "note6": "This service is provided for informational purposes only",
+    "note7": "We disclaim all liability for any decisions made based on the information provided"
+  },
+  "mileage": {
+    "noMileage": "Not available",
+    "noMileageMessage": ""
   }
 }

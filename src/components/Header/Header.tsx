@@ -1,5 +1,5 @@
 import './Header.css';
-import { ReactComponent as Home } from '../../icons/whouse.svg';
+import { ReactComponent as Home } from '../../icons/house.svg';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 interface HeaderProps {

@@ -1,50 +1,129 @@
 {
-  "search": {
-    "title": "חיפוש רכב לפי מספר רישוי",
-    "subtitle": "חיפוש מידע על רכב",
-    "enterLicense": "הכנס מספר רישוי",
-    "licensePlate": "מספר לוחית רישוי",
-    "placeholder": "הכנס מספרים בלבד",
-    "searchVehicle": "חפש רכב",
-    "errors": {
-      "cantStartWithZero": "רישוי לא יכול להתחיל באפס",
-      "numbersOnly": "אנא הכנס מספרים בלבד",
-      "cacheRead": "שגיאה בקריאה מהמטמון",
-      "cacheSave": "שגיאה בשמירה למטמון",
-      "httpError": "שגיאת HTTP סטטוס",
-      "apiNotSuccessful": "בקשת API לא הצליחה",
-      "noVehicleFound": "לא נמצא רכב עם מספר רישוי זה",
-      "apiFetchError": "שגיאה בהבאת נתונים מה-API"
+  "buttons": {
+    "generalInfo": "נתוני רכב",
+    "ownershipHistory": "שינויי בעלות",
+    "handicappedSign": "תו נכה",
+    "kilometrage": "'קילומטראז"
+  },
+  "tooltips": {
+    "basicInfo": "קבלת מידע בסיסי על הרכב",
+    "ownershipHistory": "צפייה בהיסטוריית הבעלות (רכבים בלבד)",
+    "handicappedSign": "בדיקת תו חניה לנכים (רכבים בלבד)",
+    "kilometrage": "צפייה בנתוני קילומטראז' הרכב (רכבים בלבד)",
+    "categories": {
+      "car": "חיפוש רכבים",
+      "bike": "חיפוש אופנועים",
+      "truck": "חיפוש משאיות",
+      "bus": "חיפוש אוטובוסים"
     }
   },
-  "carInfo": {
-    "subtitle": "מידע על רכב",
-    "licensePlate": "לוחית רישוי",
-    "brand": "יצרן",
-    "gradeLevel": "גימור",
-    "productionYear": "שנת ייצור",
+  "modal": {
+    "titles": {
+      "basicInfo": "",
+      "ownershipHistory": "היסטוריית בעלות",
+      "handicappedSign": "תו חניה לנכים",
+      "kilometrage": "קילומטראז' הרכב",
+      "default": "מידע על הרכב",
+      "multipleData": "מידע על הרכב"
+    },
+    "basicInformation": "נתוני רכב",
+    "detailedInformation": "מידע מפורט",
+    "additionalDataNotAvailable": "מידע מפורט נוסף לא זמין עבור רכב זה."
+  },
+  "fields": {
+    "vehicleNumber": "מספר רכב",
+    "manufacturer": "יצרן",
+    "model": "דגם",
+    "manufacturingYear": "שנת ייצור",
+    "fuelType": "סוג דלק",
+    "totalWeight": "משקל כולל",
     "ownership": "בעלות",
-    "validUntil": "תוקף רשיון רכב",
-    "lastTest": "טסט אחרון",
+    "validUntil": "תקף עד",
+    "lastTest": "בדיקה אחרונה",
     "color": "צבע",
-    "onRoadFrom": "מועד עליה לכביש",
-    "engineType": "סוג מנוע",
-    "frontTire": "צמיג קדמי",
-    "rearTire": "צמיג אחורי",
+    "onRoadFrom": "תאריך עלייה לכביש",
+    "frontTire": "צמיגים",
     "chassis": "שלדה",
-    "searchAnother": "חפש רכב אחר",
-    "ownership_types": {
-      "private": "פרטי",
-      "commercial": "מסחרי"
-    }
+    "trimLevel": "רמת גימור",
+    "lastTestKilometers": "קילומטרים בטסט אחרון",
+    "firstRegistration": "רישום ראשון",
+    "ownershipDate": "תאריך בעלות",
+    "tagIssueDate": "תאריך הפקת תו",
+    "tagType": "סוג תו",
+    "engineNumber": "מספר מנוע",
+    "engineCapacity": "נפח מנוע",
+    "horsePower": "כוח סוס",
+    "seatsNumber": "מספר מושבים",
+    "axleWeight": "משקל ציר",
+    "propulsion": "הנעה",
+    "towing": "גרירה",
+    "vehicleTypeGroup": "קבוצת סוג רכב",
+    "vehicleType": "סוג רכב",
+    "manufacturerCountry": "ארץ יצרן",
+    "safetyEquipmentLevel": "רמת אבזור בטיחותי",
+    "pollutionGroup": "קבוצת זיהום",
+    "engineModel": "סוג מנוע",
+    "commercialName": "שם מסחרי",
+    "taxGroup": "קבוצת אגרה",
+    "engineVolume": "נפח מנוע",
+    "height": "גובה",
+    "sunRoof": "חלון בגג",
+    "carBodyStyle": "סוג מרכב",
+    "doorsNumber": "מספר דלתות",
+    "towingCapacityWithBrakes": "כושר גרירה עם בלמים",
+    "towingCapacityWithoutBrakes": "כושר גרירה בלי בלמים",
+    "standard": "תקן",
+    "safetyScore": "דירוג בטיחות",
+    "operator": "חברת תחבורה",
+    "cluster": "אזורי פעולה",
+    "busLicense": "רשיון אוטובוס",
+    "stoneProof": "ממוגן אבנים",
+    "bulletProof": "ממוגן ירי",
+    "busSize": "גודל",
+    "busType": "סוג אוטובוס"
   },
-  "changelog": {
-    "title": "מה חדש בגרסה",
-    "subtitle": "רשימת גרסאות"
+  "errors": {
+    "unknownAction": "פעולה לא מוכרת התבקשה",
+    "unknownCategory": "קטגוריית רכב לא מוכרת",
+    "enterValidNumber": "אנא הכנס מספר רכב תקין",
+    "noDataFound": "לא נמצא מידע עבור רכב זה",
+    "apiError": "שגיאה בקבלת מידע מהשרת",
+    "cacheError": "שגיאה בגישה למידע שמור"
+  },
+  "search": {
+    "placeholder": "הכנס מספר רכב",
+    "errors": {
+      "enterValidNumber": "אנא הכנס מספר רכב תקין",
+      "noDataFound": "לא נמצא מידע עבור רכב זה",
+      "noVehicleFound": "רכב לא נמצא",
+      "selectActionType": "בחר סוג מידע",
+      "cantStartWithZero": "מספר רישוי אינו מתחיל מאפס",
+      "numbersOnly": "נא הכניסו מספרים בלבד"
+    }
   },
   "common": {
-    "loading": "טוען...",
-    "error": "שגיאה",
-    "na": "לא זמין"
+    "close": "סגור",
+    "na": "לא זמין",
+    "yes": "כן",
+    "no": "לא",
+    "noDataFound": "לא נמצא מידע",
+    "error": "אירעה שגיאה"
+  },
+  "disclaimer": {
+    "title": "הצהרת מקור נתונים",
+    "text": "כל המידע על כלי הרכב המוצג באתר זה מקורו במאגר הנתונים הציבורי של משרד התחבורה הישראלי. אתר זה משמש כממשק עצמאי לגישה למידע זמין לציבור ואינו מזוהה עם משרד התחבורה הישראלי, מאושר על ידו או מופעל על ידו.",
+    "importantNotice": "הודעה חשובה:",
+    "finalNote": ".למידע רשמי ומחייב משפטית על כלי רכב, נא לפנות ישירות למשרד התחבורה",
+    "note1": "כל הנתונים מסופקים 'כפי שהם' ממאגר הנתונים הרשמי של הממשלה",
+    "note2": "איננו מבטיחים את הדיוק, השלמות או העדכניות של המידע המוצג",
+    "note3": "משרד התחבורה הוא הרשות הבלעדית האחראית על דיוק ותקפות כל נתוני הרכב",
+    "note4": "איננו אחראים לכל שגיאות, השמטות או אי התאמות בנתונים",
+    "note5": "המשתמשים נדרשים לוודא מידע קריטי ישירות מול משרד התחבורה הישראלי",
+    "note6": "שירות זה מסופק למטרות מידע בלבד",
+    "note7": "אנו לא אחראיים על כל החלטות שיתקבלו על בסיס המידע המסופק"
+  },
+  "mileage": {
+    "noMileage": "לא זמין",
+    "noMileageMessage": ""
   }
 }
