@@ -125,5 +125,8 @@
   "mileage": {
     "noMileage": "Not available",
     "noMileageMessage": ""
+  },
+  "changelog": {
+    "title": "What's New?"
   }
 }

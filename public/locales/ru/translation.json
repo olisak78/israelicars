@@ -125,5 +125,8 @@
   "mileage": {
     "noMileage": "Не установлено",
     "noMileageMessage": ""
+  },
+  "changelog": {
+    "title": "Новости сайта"
   }
 }

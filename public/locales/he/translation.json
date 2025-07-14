@@ -125,5 +125,8 @@
   "mileage": {
     "noMileage": "לא זמין",
     "noMileageMessage": ""
+  },
+  "changelog": {
+    "title": "מה חדש ?"
   }
 }
