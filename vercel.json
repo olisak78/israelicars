@@ -6,17 +6,13 @@
   },
   "redirects": [
     {
-      "source": "http://israelicars.com/:path*",
-      "destination": "https://www.israelicars.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://israelicars.com/:path*",
-      "destination": "https://www.israelicars.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://www.israelicars.com/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "israelicars.com"
+        }
+      ],
       "destination": "https://www.israelicars.com/:path*",
       "permanent": true
     }
