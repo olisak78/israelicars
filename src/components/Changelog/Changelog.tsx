@@ -6,7 +6,7 @@ const Changelog = () => {
     <div className='changelog-modal-content'>
       <div className='changelog-version'>
         <Logo className='logo-modal' />
-        version 1.2 - Rasbora (?/7/2025)
+        version 1.2 - Rasbora (14/7/2025)
       </div>
 
       <div className='changelog-greeting'>More Car Info!</div>
